@@ -1,0 +1,1 @@
+# terraform-instances-setup-grouped-variable
