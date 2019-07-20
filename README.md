@@ -3,7 +3,7 @@
 ## Requirement
 Required Terraform Version >= 0.12
 
-Example to execute terraform by docker-compose is below
+Example to execute terraform by docker-compose is below  
 [docker-compose-examples](https://github.com/aoyagi9936/docker-compose-examples/tree/master/terraform/gcp)
 
 ## Usage
