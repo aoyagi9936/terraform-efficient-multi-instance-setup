@@ -1,4 +1,5 @@
-# terraform-efficient-multi-instance-setup
+## Overview
+This script is example to create multiple instances by using complex types and terraform module.
 
 ## Requirement
 Required Terraform Version >= 0.12
