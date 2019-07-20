@@ -1,5 +1,5 @@
 ## Overview
-This script is example to create multiple instances by using complex types and terraform module.
+This script is an example to create multiple instances by using complex objects that be passed to child modules as inputs.
 
 ## Requirement
 Required Terraform Version >= 0.12
