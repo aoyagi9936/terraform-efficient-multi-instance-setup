@@ -1,15 +1,21 @@
-# terraform-efficient-multi-instance-setup
+variable "project" {
+  type = "map"
+  default = {
+    project_id = "[YOUR_PROJECT_ID]"
+    region     = "[YOUR_REGION]"
+  }
+}
 
-## Requirement
-Required Terraform Version >= 0.12
+variable "network" {
+  type = "map"
+  default = {    
+    vpc_name        = "my-network"
+    region          = "us-central1"
+    ip_cidr_range   = "10.1.0.0/16"
+    vpc_subnet_name = "my-network-subnet"
+  }
+}
 
-Example to execute terraform by docker-compose is below
-[docker-compose-examples](https://github.com/aoyagi9936/docker-compose-examples/tree/master/terraform/gcp)
-
-## Usage
-
-### Define terraform variables
-```
 variable "instances" {
   type = list(object({
     name         = string
@@ -55,22 +61,3 @@ variable "instances" {
     }
   ]
 }
-```
-
-### Set to module variables
-```
-module "module_instance" {
-  source = "./modules/instance"
-  inst_num    = "${length(var.instances)}"
-  inst_prop   = "${var.instances}"
-  inst_nw     = "${google_compute_network.private-network.self_link}"
-  inst_nw_sub = "${google_compute_subnetwork.private-network-subnet.self_link}"
-}
-```
-
-### Execute terraform
-```shell
-$ docker-compose terraform --rm init
-$ docker-compose terraform --rm plan
-$ docker-compose terraform --rm apply
-```

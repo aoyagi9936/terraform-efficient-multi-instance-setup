@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  terraform:
+    image: hashicorp/terraform:${terraform_version}
+    volumes:
+      - ${credential_path}:/home
+      - ./:/workdir
+    # If you need to use parent directory, set '../:workdir' to the volumes and set '/workdir/<current_dir>' to the working_dir.
+    working_dir: "/workdir"
+    environment:
+      - GOOGLE_CLOUD_KEYFILE_JSON=${credential_file}
+
