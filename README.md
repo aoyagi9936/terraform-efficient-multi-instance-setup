@@ -4,7 +4,7 @@ This script is an example to create multiple instances by using complex objects 
 ## Requirement
 Required Terraform Version >= 0.12
 
-Example to execute terraform by docker-compose is below  
+The link below is an example to execute terraform by docker-compose.__
 [docker-compose-examples](https://github.com/aoyagi9936/docker-compose-examples/tree/master/terraform/gcp)
 
 ## Usage
