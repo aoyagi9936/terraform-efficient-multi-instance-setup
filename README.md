@@ -1,10 +1,10 @@
 ## Overview
-This script is an example to create multiple instances by using complex objects that be passed to child modules as inputs.
+This script is an example to create multiple instances using complex objects that be passed to child modules as inputs.
 
 ## Requirement
 Required Terraform Version >= 0.12
 
-The link below is an example to execute terraform by docker-compose.  
+The link below is an example to execute terraform with docker-compose.  
 [docker-compose-examples](https://github.com/aoyagi9936/docker-compose-examples/tree/master/terraform/gcp)
 
 ## Usage
