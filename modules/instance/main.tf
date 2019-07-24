@@ -1,10 +1,5 @@
-variable inst_num    {}
-variable inst_prop   {}
-variable inst_nw     {}
-variable inst_nw_sub {}
-
 resource "google_compute_instance" "default" {
-  count        = var.inst_num
+  count        = length(var.inst_prop)
   
   name         = var.inst_prop[count.index].name
   machine_type = var.inst_prop[count.index].machine_type
@@ -28,4 +23,6 @@ resource "google_compute_instance" "default" {
     preemptible       = var.inst_prop[count.index].preemptible
     automatic_restart = var.inst_prop[count.index].automatic_restart
   }
+
+  metadata = var.inst_prop[count.index].metadata
 }

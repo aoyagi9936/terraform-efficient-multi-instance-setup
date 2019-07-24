@@ -23,7 +23,7 @@ resource "google_compute_subnetwork" "private-network-subnet" {
 # Comput Engine
 module "module_instance" {
   source = "./modules/instance"
-  inst_num    = "${length(var.instances)}"
+
   inst_prop   = "${var.instances}"
   inst_nw     = "${google_compute_network.private-network.self_link}"
   inst_nw_sub = "${google_compute_subnetwork.private-network-subnet.self_link}"
