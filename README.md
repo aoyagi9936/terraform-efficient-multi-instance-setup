@@ -81,7 +81,7 @@ module "module_instance" {
 
 ### Execute terraform
 ```shell
-$ docker-compose terraform --rm init
-$ docker-compose terraform --rm plan
-$ docker-compose terraform --rm apply
+$ docker-compose run --rm terraform init
+$ docker-compose run --rm terraform plan
+$ docker-compose run --rm terraform apply
 ```
