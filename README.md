@@ -21,6 +21,7 @@ variable "instances" {
     private_ip   = string
     preemptible  = bool
     automatic_restart = bool
+    metadata     = map(string)
   }))
   
   default = [
@@ -33,6 +34,9 @@ variable "instances" {
       private_ip   = "10.1.0.10"
       preemptible  = true
       automatic_restart = false
+      metadata     = {
+        "description" = "test1"
+      }
     },
     {
       name         = "instance-2"
@@ -43,6 +47,9 @@ variable "instances" {
       private_ip   = "10.1.0.11"
       preemptible  = true
       automatic_restart = false
+      metadata     = {
+        "description" = "test2"
+      }
     },
     {
       name         = "instance-3"
@@ -53,6 +60,9 @@ variable "instances" {
       private_ip   = "10.1.0.12"
       preemptible  = true
       automatic_restart = false
+      metadata     = {
+        "description" = "test3"
+      }
     }
   ]
 }
